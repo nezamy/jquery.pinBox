@@ -1,95 +1,234 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Pin Box</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-ltr.min.css">
+ 	<meta charset="utf-8">
+    <title>jQuery.pinBox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pin any element within a container">
+    <meta name="author" content="Mahmoud Elnezamy">
+    <meta name="keywords" content="HTML,CSS,JSON,JavaScript, jQuery,pinBox, pin, fixed, Free">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-ltr.min.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-rtl.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <header>
-	<h1>Hello It`s pinBox </h1>
+	<nav>
+		<div class="container">
+			<ul class="menu">
+				<li><a href="#demo">Demo</a></li>
+				<li><a href="#how-to-use">How To Use</a></li>
+				<li><a href="#options">Options</a></li>
+				<li><a href="#abou-me">About Me</a></li>
+				<li><a href="https://github.com/NeZaMy/jquery.pinBox/archive/master.zip" class="download">Download</a></li>
+				<li><a href="https://github.com/NeZaMy/jquery.pinBox">Github</a></li>
+			</ul>
+	    </div>
+	</nav>
+	<h1 class="headColor">jQuery.pinBox <span>v1.0.0(Beta)</span></h1>
+	<p>Pin any element within a container</p>
 </header>
-<div class="container">
-	<div class="col-sm-4" id="con">
-		<div class="block-1">Block 1</div>	
-	</div>
 
-	<div class="col-sm-4">
-		<div class="block-2">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<div class="container" id="pinBoxContainer">
+
+	<div class="col-sm-3">
+		<div class="block-1 center">
+			<h2 class="headColor">Events</h2><br>
+			<div id="callbacks">
+				<span>current :</span> <span class="callback" id="pinBoxCurrent">0</span><hr>
+				<span>direction :</span> <span class="callback" id="pinBoxDirection">down</span><hr>
+				<span>width :</span> <span class="callback" id="pinBoxWidth">width</span><hr>
+				<span>active :</span> <span class="callback" id="pinBoxActive">false</span><hr>
+				<span>disabled :</span> <span class="callback" id="pinBoxDisabled">false</span><hr>
+			</div>
 		</div>	
 	</div>
 
-	<div class="col-sm-4">
-		<div class="block-3">Block 3</div>	
+	<div class="col-sm-6">
+		<div class="block-2">
+
+<!-- 	step 1	 -->
+<h1 id="how-to-use">How To Use</h1>
+<h2 class="headColor">1. Load jQuery and include pinBox plugin file</h2>
+<p>To use pinBox, you’ll need to make sure both the pinBox and jQuery 1.7 or higher scripts are included.</p>
+<pre class="pre-show prettyprint linenums">
+&lt;!--  jQuery  --&gt;
+&lt;script src=&quot;jquery-1.9.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;!--  Include pinBox plugin  --&gt;
+&lt;script src=&quot;js/jquery.pinBox.min.js&quot;&gt;&lt;/script&gt;
+</pre>
+
+
+<!-- 	step 2	 -->
+<h2 class="headColor">2. Set up your HTML</h2>
+<p>You don't need any special markup. All you need is to wrap your divs inside the container for example #pinBoxContainer and add class to your div for example .pinBox . 
+read the code comments.</p>
+<pre class="pre-show prettyprint linenums">
+&lt;!-- container with id --&gt;
+&lt;div class=&quot;container&quot; id=&quot;pinBoxContainer&quot;&gt;
+&lt;!-- if you don't use bootstrap.css 
+make sure to add [position:relative]
+if div parent have float property.  --&gt;
+	&lt;div class=&quot;col-sm-4&quot;&gt;
+	&lt;!-- box you want to pin inside [id=&quot;pinBoxContainer&quot;] have class or id --&gt;
+		&lt;div class=&quot;pinBox&quot;&gt;
+			&lt;h2 class=&quot;headColor&quot;&gt;Example box&lt;/h2&gt;
+			&lt;p&gt;some text&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-8&quot;&gt;
+		&lt;h2 class=&quot;headColor&quot;&gt;Example box&lt;/h2&gt;
+		&lt;p&gt;some text&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<!-- 	step 3	 -->
+<h2 class="headColor">3. Call the plugin</h2>
+<p>To make a pinned element stay within an outer container, use the Container option</p>
+<pre class="pre-show prettyprint linenums">
+$(document).ready(function() {
+
+	$(".pinBox").pinBox({
+		Top : '50px',
+		Container : '#pinBoxContainer',
+	});
+
+});
+</pre> 
+
+<!-- 	options		-->
+<h2 class="headColor" id="options">Call the plugin with options</h2>
+<pre class="pre-show prettyprint linenums">
+$(document).ready(function() {
+ 
+	$(&quot;.pinBox&quot;).pinBox({
+		//default 0px
+		Top : '50px',
+		//default '.container' 
+		Container : '#pinBoxContainer',
+		//default 20 
+		ZIndex : 20,
+		//default '767px' if you disable pinBox in mobile or tablet
+		MinWidth : '767px',
+		//events if scrolled or window resized  
+		Events : function(e){
+			console.log(e);
+			// e.current =&gt; current scroll top [number]
+			// e.direction =&gt; scroll down or up [up,down]
+			// e.width =&gt; window width [number]
+			// e.active =&gt; if pinBox active [true,false]
+			// e.disabled =&gt; if window width &lt; MinWidth pinBox will disabled [true, false]
+		}
+	});
+ 
+});
+</pre>
+
+
+<!-- end -->
+		</div>	
+	</div>
+
+
+	<div class="col-sm-3">
+		<div class="block-3 center">
+			<h2 class="headColor">Example box</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident</p>
+		</div>
 	</div>
 </div>
 
+<div class="me" id="abou-me">
+    <a href="http://nezamy.com/">
+        <img src="http://nezamy.com/img/jqV-Tc5DUCg.jpg">
+    </a>
+    <h1>Mahmoud Elnezamy</h1>
+    <h2>Full Stack Web Developer</h2>
+</div>
+
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/pinBox.js"></script>
+<script src="js/prettify.js"></script>
+<script type="text/javascript" src="js/jquery.pinBox.min.js"></script>
 <script type="text/javascript">
+//scroll to div
+jQuery.fn.scrollTo = function(elem, speed, top) {
+	if(top){
+		top = ($(elem).offset().top - top) ;
+	}else{
+		top = $(elem).offset().top;
+	}
+    $(this).animate({
+        	// scrollTop:  $(this).scrollTop() - $(this).offset().top + top
+        	scrollTop: $(this).offset().top + top
+    }, speed == undefined ? 1000 : speed); 
+    return this; 
+};
+
 $(document).ready(function() {
-	$('.block-3,.block-1').pinBox({
-		Top:'20px',
-		Before : function(){
-			$(this).addClass('hello');
+	window.prettyPrint && prettyPrint();
+	$('.menu a').click( function (e){
+		var eid = $(this).attr('href');
+		if($(eid).length){
+			e.preventDefault();
+			$("html,body").scrollTo(eid, 500,50);
 		}
 	});
-	//$('.block-1').pinBox();
+
+	var current, direction, width, active, disabled;
+	$('.block-1').pinBox({
+		Top:'20px',
+		Container : '#pinBoxContainer',
+		Events : function(e){
+			$('#pinBoxCurrent').text(e.current);
+			$('#pinBoxDirection').text(e.direction);
+			$('#pinBoxWidth').text(e.width);
+			$('#pinBoxActive').text(e.active);
+			$('#pinBoxDisabled').text(e.disabled);
+
+			
+			if(current !== e.current){
+				uc('#pinBoxCurrent');
+				current = e.current;
+			}
+
+			if(direction !== e.direction){
+				uc('#pinBoxDirection');
+				direction = e.direction;
+			}
+
+			if(width !== e.width){
+				uc('#pinBoxWidth');
+				width = e.width;
+			}
+
+			if(active !== e.active){
+				uc('#pinBoxActive');
+				active = e.active;
+			}
+
+			if(disabled !== e.disabled){
+				uc('#pinBoxDisabled');
+				disabled = e.disabled;
+			}
+		}
+	});
+	$('.block-3').pinBox({Top:'20px', Container : '#pinBoxContainer'});
+
+	//update events class
+	function uc(e){
+		$(e).addClass('active');
+		setTimeout(function() {
+			$(e).removeClass('active');
+		}, 500);
+	}
 });
 </script>
 </body>
