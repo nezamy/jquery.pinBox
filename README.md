@@ -73,7 +73,7 @@ $(document).ready(function() {
 });
 ```
 
-## Reload event
+## Reload trigger
 ```js
 $(document).ready(function() {
  
