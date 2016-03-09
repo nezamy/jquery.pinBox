@@ -82,12 +82,19 @@ $(document).ready(function() {
 });
 ```
 
-
-
-
 ## Examples
 
 examples [Here](http://nezamy.com/pinBox/).
+
+
+# Changelog:
+
+### 1.1.0
+* added `pinBox.reload` trigger 
+* resolved height if the parent height changed 
+* resolved position if resize or reload page and scroll top  > 0
+
+
 
 ## The MIT License (MIT)
 
