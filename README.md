@@ -73,6 +73,18 @@ $(document).ready(function() {
 });
 ```
 
+## Reload event
+```js
+$(document).ready(function() {
+ 
+	$(".pinBox").trigger('pinBox.reload');
+ 
+});
+```
+
+
+
+
 ## Examples
 
 examples [Here](http://nezamy.com/pinBox/).
