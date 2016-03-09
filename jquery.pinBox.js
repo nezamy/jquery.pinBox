@@ -1,5 +1,5 @@
 /**
- * @version		1.0.0
+ * @version		1.1.0
  * @author		Mahmoud Elnezamy
  * @copyright		2016 (c) jquery.pinBox
  * @license		MIT License
@@ -50,11 +50,16 @@ if (typeof Object.create !== 'function') {
 			this.OnScroll(elem);
 			this.OnResize(elem);
 			var self = this;
+			//fix Height and fix show pinBox if scroll top > 0
 			setTimeout(function() {
 				for (var i = elements.length - 1; i >= 0; i--) {
 					self.fixContainerHeight(elements[i]);
 				}
+				$(window).trigger('scroll');
 			}, 1000);
+			$(elem).on('pinBox.reload', function(){
+				self.Reload(elem);
+			});
 		},
 
 		Prepare : function (elem) {
@@ -175,6 +180,7 @@ if (typeof Object.create !== 'function') {
 				$this.data('pinBoxOptions', JSON.stringify(BoxOpt));
 				self.Prepare(elem);
 				self.CallEvents($this, true, BoxOpt.Disabled);
+				$(window).trigger('scroll');
 			});
 		},
 		CallEvents : function(e, active, disabled){
@@ -207,13 +213,19 @@ if (typeof Object.create !== 'function') {
 					'transition':'.3s'
 				});
 			}
+		},
+		Reload : function (elem) {
+			var $this = $(elem);
+			var width = $this.parent().width();
+			$this.attr('style','').css({width:width});
+			this.Prepare(elem);
 		}
 	};
 
 	$.fn.pinBox = function (options) {
 		var elements = [];
 		var pinBox = Object.create( PinBox );
-		this.each(function() {
+		return this.each(function() {
 			elements.push(this);
 			pinBox.init( this, options, elements );
 		});
